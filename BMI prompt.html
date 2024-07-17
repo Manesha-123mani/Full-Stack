@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <script>
+        function calculateBMI() {
+            let heightCm = parseFloat(prompt("Enter your height in centimeters:"));
+            let weight = parseFloat(prompt("Enter your weight in kilograms:"));
+
+            if (isNaN(heightCm) || isNaN(weight)) {
+                alert("Please enter valid numbers for height and weight.");
+                return;
+            }
+
+            let heightM = heightCm / 100; // Convert height from centimeters to meters
+            let bmi = weight / (heightM * heightM);
+            alert("Your BMI is " + bmi.toFixed(2));
+        }
+
+        calculateBMI();
+    </script>
+</body>
+</html>
