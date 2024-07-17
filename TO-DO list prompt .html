@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple To-Do List</title>
+</head>
+<body>
+    <script>
+        function todoList() {
+            let todos = [];
+            let moreItems = true;
+
+            while (moreItems) {
+                let item = prompt("Enter a to-do item:");
+                if (item) {
+                    todos.push(item);
+                }
+                moreItems = confirm("Do you want to add another item?");
+            }
+
+            if (todos.length > 0) {
+                alert("Your to-do list:\n" + todos.join("\n"));
+            } else {
+                alert("Your to-do list is empty.");
+            }
+        }
+
+        todoList();
+    </script>
+</body>
+</html>
