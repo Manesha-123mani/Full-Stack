@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+        }
+        .container {
+            text-align: center;
+        }
+        .color-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+        .red { background-color: aqua; }
+        .green { background-color: palevioletred; }
+        .blue { background-color: slateblue; }
+        .yellow { background-color: yellow; color: black; }
+        .purple { background-color: purple; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="color-button red" onclick="changeBackgroundColor('aqua')">aqua</button>
+        <button class="color-button green" onclick="changeBackgroundColor('palevioletred')">palevioletred</button>
+        <button class="color-button blue" onclick="changeBackgroundColor('slateblue')">Slateblue</button>
+        <button class="color-button yellow" onclick="changeBackgroundColor('yellow')">Yellow</button>
+        <button class="color-button purple" onclick="changeBackgroundColor('purple')">Purple</button>
+    </div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
